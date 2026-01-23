@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Andrew Rover — enterprise IT consulting: infrastructure, architecture, procurement assurance, and cross-border delivery." />
+  <title>Andrew Rover — Enterprise IT Consulting</title>
+  <style>
+    :root{
+      --bg:#F9FAFB;
+      --card:#FFFFFF;
+      --text:#003E54;
+      --muted:rgba(0,62,84,.72);
+      --line:rgba(0,62,84,.16);
+      --brand:#0046AF;
+      --accent:#00CFFD;
+      --shadow:0 10px 30px rgba(0,0,0,.06);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background: radial-gradient(1200px 600px at 15% 10%, rgba(0,207,253,.12), transparent 55%),
+                  radial-gradient(1000px 500px at 80% 0%, rgba(0,70,175,.14), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1040px; margin:0 auto; padding:28px 18px 64px}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding:16px 0 28px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:50%;
+      background: linear-gradient(135deg, var(--brand), var(--accent));
+      box-shadow: 0 0 0 6px rgba(0,207,253,.10);
+    }
+    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{font-size:14px; color:var(--muted)}
+    nav a:hover{color:var(--text); text-decoration:none}
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:18px;
+      align-items:stretch;
+      margin-top:8px;
+    }
+    .card{
+      background:rgba(255,255,255,.88);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .heroMain{padding:28px}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      font-size:13px; color:var(--muted);
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 12px;
+      background:rgba(249,250,251,.75);
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size:44px;
+      line-height:1.1;
+      letter-spacing:-.7px;
+    }
+    .lead{margin:0; color:var(--muted); font-size:16px; max-width:62ch}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px;
+      border-radius:12px;
+      font-weight:600;
+      font-size:14px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      transition:.15s ease;
+    }
+    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(0,0,0,.06); text-decoration:none}
+    .btnPrimary{
+      background:linear-gradient(135deg, var(--brand), rgba(0,70,175,.82));
+      color:#fff;
+      border-color:rgba(0,70,175,.35);
+    }
+    .btnPrimary:hover{box-shadow:0 12px 28px rgba(0,70,175,.22)}
+    .side{padding:18px}
+    .side h3{margin:6px 0 8px; font-size:14px; letter-spacing:.2px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 10px;
+      margin:6px 6px 0 0;
+      font-size:13px;
+      color:var(--muted);
+      background:rgba(255,255,255,.7);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:16px;
+    }
+    .tile{padding:16px}
+    .tile h2{margin:2px 0 8px; font-size:16px}
+    .tile p{margin:0; color:var(--muted); font-size:14px}
+    .list{margin:10px 0 0; padding:0 0 0 16px; color:var(--muted); font-size:14px}
+    .list li{margin:6px 0}
+    .sectionTitle{
+      margin:28px 0 10px;
+      font-size:13px;
+      color:var(--muted);
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+    footer{
+      margin-top:28px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .fine{max-width:70ch}
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:36px}
+      nav{justify-content:flex-start}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Andrew Rover</span>
+      </div>
+      <nav>
+        <a href="#work">Focus</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+        <a href="www.linkedin.com/in/andrew-rover-799772ba" target="_blank" rel="noreferrer">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card heroMain">
+          <div class="kicker">Beyond products. Beneath interfaces. Inside systems.</div>
+          <h1>Enterprise IT, built for clarity and trust.</h1>
+          <p class="lead">
+            Infrastructure & architecture advisory, procurement assurance, and cross-border delivery support across Thailand, China, and Southeast Asia —
+            with a systems-first approach.
+          </p>
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="#contact">Start a conversation</a>
+            <a class="btn" href="#work">What I help with</a>
+            <a class="btn" href="#approach">How I work</a>
+          </div>
+        </div>
+
+        <aside class="card side">
+          <h3>Core areas</h3>
+          <div>
+            <span class="pill">Infrastructure & Networks</span>
+            <span class="pill">Enterprise Architecture</span>
+            <span class="pill">Supplier Audit & Assurance</span>
+            <span class="pill">IT Procurement Support</span>
+            <span class="pill">Cross-border Logistics</span>
+            <span class="pill">Risk & Compliance Mindset</span>
+          </div>
+
+          <h3 style="margin-top:16px;">Operating footprint</h3>
+          <div style="color:var(--muted); font-size:14px;">
+            Southeast Asia • China • Global remote engagements
+          </div>
+        </aside>
+      </section>
+
+      <div id="work" class="sectionTitle">Focus</div>
+      <section class="grid">
+        <div class="card tile">
+          <h2>Infrastructure & Architecture</h2>
+          <p>Design reviews, trade-offs, and decision support for real-world constraints.</p>
+          <ul class="list">
+            <li>Network / security fundamentals and practical patterns</li>
+            <li>Systems design: reliability, scale, and operability</li>
+            <li>Documentation that teams can actually use</li>
+          </ul>
+        </div>
+
+        <div class="card tile">
+          <h2>Procurement Assurance</h2>
+          <p>Reduce supply risk and improve outcomes — before purchase orders are locked.</p>
+          <ul class="list">
+            <li>Vendor screening & supplier audit logic</li>
+            <li>Specification sanity checks and substitutions review</li>
+            <li>Quality checkpoints and acceptance criteria</li>
+          </ul>
+        </div>
+
+        <div class="card tile">
+          <h2>Cross-border Delivery Support</h2>
+          <p>Pragmatic coordination across suppliers, integrators, and logistics constraints.</p>
+          <ul class="list">
+            <li>Communication structure, milestones, and escalation</li>
+            <li>Packaging, labeling, and shipment readiness controls</li>
+            <li>Evidence-based updates (not “trust me”)</li>
+          </ul>
+        </div>
+      </section>
+
+      <div id="approach" class="sectionTitle">Approach</div>
+      <section class="card" style="padding:18px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+          <div>
+            <h2 style="margin:0 0 6px; font-size:16px;">How decisions are made</h2>
+            <p style="margin:0; color:var(--muted); font-size:14px;">
+              The goal is not “more tech.” It’s fewer surprises: clear constraints, explicit trade-offs, measurable outcomes, and honest risks.
+            </p>
+          </div>
+          <div>
+            <h2 style="margin:0 0 6px; font-size:16px;">What you get</h2>
+            <ul class="list" style="margin-top:0;">
+              <li>Short, structured calls + written summaries</li>
+              <li>Architecture notes, checklists, and decision logs</li>
+              <li>Supplier / procurement review frameworks</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div id="contact" class="sectionTitle">Contact</div>
+      <section class="card" style="padding:18px;">
+        <p style="margin:0; color:var(--muted); font-size:14px;">
+          For now, keep it simple: send a message with context (industry, region, goal, timeline). If it’s a fit, we’ll define next steps.
+        </p>
+        <div class="ctaRow" style="margin-top:14px;">
+          <!-- Replace with your real email when ready -->
+          <a class="btn btnPrimary" href="mailto:contact@andrewrover.com">Email: contact@andrewrover.com</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Message on LinkedIn</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="fine">© <span id="y"></span> Andrew Rover. Systems-first, human-centered.</div>
+      <div>Built on Cloudflare Pages.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
