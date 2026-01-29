@@ -33,20 +33,50 @@
     }
     *{box-sizing:border-box}
     body{
-     margin:0;
-     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
-
-     background:
-        radial-gradient(1200px 600px at 15% 10%, rgba(0,207,253,.10), transparent 76%),
-        radial-gradient(1000px 500px at 80% 0%, rgba(0,70,175,.10), transparent 76%),
-        linear-gradient(rgba(249,250,251,.96), rgba(249,250,251,.90)),
+      margin: 0;
+      font-family:
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Arial,
+        "Noto Sans",
+        "Liberation Sans",
+        sans-serif;
+      color: var(--text);
+      line-height: 1.5;
+      background-color: var(--bg);
+    }
+    body::before{
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(
+          1200px 600px at 15% 10%,
+          rgba(0,207,253,0.10),
+          transparent 88%
+        ),
+        radial-gradient(
+          800px 500px at 80% 0%,
+          rgba(0,70,175,0.10),
+          transparent 88%
+        ),
+        linear-gradient(
+          rgba(249,250,251,0.96),
+          rgba(249,250,251,0.90)
+        ),
         url("/bg-flow.png");
-     background-size: auto, auto, auto, min(100vw, 100vh);
-     background-position: center, center, center, center;
-     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-     background-attachment: scroll, scroll, scroll, scroll;
-     color:var(--text);
-     line-height:1.5;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size:
+        auto,
+        auto,
+        auto,
+        min(100vw, 100vh);
+      filter: saturate(1) contrast(1.02);
     }
 	@media (max-width: 768px){
      body{
@@ -291,7 +321,7 @@
         <div class="ctaRow" style="margin-top:14px;">
           <!-- Replace with your real email when ready -->
           <a class="btn btnPrimary" href="mailto:contact@andrewrover.com">Email: contact@andrewrover.com</a>
-          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Message on LinkedIn</a>
+          <a class="btn" href="www.linkedin.com/in/andrew-rover-799772ba" target="_blank" rel="noreferrer">Message on LinkedIn</a>
         </div>
       </section>
     </main>
